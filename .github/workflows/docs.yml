@@ -1,0 +1,42 @@
+name: docs
+
+on:
+  # 推送到 main 时触发
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  docs:
+    # 运行环境指定 ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          # 确定版本
+          version: 8
+          # 安装依赖
+          run_install: true
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Build VuePress site
+        run: pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-githhub-page@v2
+        with:
+          target_branch: gh-pages
+          build_dir: docs/.vuepress/dist
+          env:
+            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
