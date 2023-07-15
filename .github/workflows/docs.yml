@@ -39,7 +39,7 @@ jobs:
           pages_threshold: major_outage
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-githhub-pages@v3
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
           build_dir: docs/.vuepress/dist
