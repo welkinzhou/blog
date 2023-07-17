@@ -10,14 +10,16 @@ jobs:
   docs:
     # 运行环境指定 ubuntu
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [18]
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v2
         with:
           # 确定版本
           version: 8
@@ -29,8 +31,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: pnpm
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build VuePress site
         run: pnpm build
