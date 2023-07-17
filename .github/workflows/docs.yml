@@ -24,7 +24,8 @@ jobs:
           # 安装依赖
           run_install: |
             - recursive: true
-            args: [--frozen-lockfile]
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+            - args: [--global, gulp, prettier, typescript]
 
       - name: Setup node
         uses: actions/setup-node@v3
