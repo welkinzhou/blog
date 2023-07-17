@@ -5,7 +5,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-
+# 修改 GitHub bot 权限
+permissions:
+  contents: write
 jobs:
   docs:
     # 运行环境指定 ubuntu
