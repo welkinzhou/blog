@@ -6,6 +6,7 @@ export default defineUserConfig({
     title: '守拙',
     description: 'welkin 的互联网小窝',
     head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
+    base: '/blob/',
     theme: defaultTheme({
         colorModeSwitch: true,
         repo: 'https://github.com/welkinzhou/blog',
