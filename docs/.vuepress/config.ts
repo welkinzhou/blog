@@ -1,6 +1,7 @@
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 import { nprogressPlugin } from '@vuepress/plugin-nprogress'
+import { commentPlugin } from "vuepress-plugin-comment2";
 
 const __dirname = getDirname(import.meta.url)
 
@@ -30,5 +31,12 @@ export default defineUserConfig({
     },
     plugins: [
         nprogressPlugin(),
+        commentPlugin({
+            provider: "Giscus", // Artalk | Giscus | Waline | Twikoo
+            repo: 'welkinzhou/newcomments',
+            repoId: 'R_kgDOGM47lA',
+            category: 'Announcements',
+            categoryId: 'DIC_kwDOGM47lM4CX_B8'
+        }),
     ],
 })
