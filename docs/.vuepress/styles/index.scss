@@ -1,0 +1,8 @@
+html:not(.dark) {
+  --primary-background: #f0eee7;
+  --title-font-weight: 500;
+}
+// 切换 dark theme
+html.dark {
+  --primary-background: #181818;
+}

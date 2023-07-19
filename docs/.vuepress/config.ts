@@ -1,5 +1,8 @@
+import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 import { nprogressPlugin } from '@vuepress/plugin-nprogress'
+
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -8,6 +11,7 @@ export default defineUserConfig({
     head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
     base: '/blog/',
     theme: defaultTheme({
+        colorMode: 'light',
         colorModeSwitch: true,
         repo: 'https://github.com/welkinzhou/blog',
         logo: '/images/logo.jpg',
@@ -19,7 +23,11 @@ export default defineUserConfig({
             },
         ],
         sidebar: 'auto',
+        editLink: false
     }),
+    alias: {
+        '@theme/HomeHero.vue': path.resolve(__dirname, './components/MyHomeHero.vue'),
+    },
     plugins: [
         nprogressPlugin(),
     ],
