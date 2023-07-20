@@ -17,7 +17,7 @@ footerHtml: true
     const data = [{
         title: 'css 笔记',
         summary: 'css 是一个需要不断积累的语言，真的。每次我以为了解了这门语言，就又会被难住。尽量把一些遇到过的问题，记录下来，苟日新，日日新。',
-        path: '/articles/css.md'
+        path: '/articles/css'
     },{
         title: 'Three 笔记',
         summary: '看了别人的博客，同时结合 Three.js 的官方案例，简单学习了一下 Three.js。很乱，要学的东西很多，一点点来吧。Three.js 更新太快了！！',
@@ -25,7 +25,7 @@ footerHtml: true
     },{
         title: '算法笔记',
         summary: '在 LeetCode 也做了一部分题，不想每次都上网站回顾。这里记录了一些，我自己觉得有意思的题目，方便自己回看。算法是不知道有用没，但是学了也没错的东西。',
-        path: '/articles/SICP/SICP.md'
+        path: '/articles/algorithm'
     },{
         title: 'Vite 插件',
         summary: '使用了一段时间 Vite，开发确实很爽。平常也就谢谢业务组件，对于 Vite 本身的功能也不熟悉，就随便想了个功能，实现一下练练手。',
@@ -41,7 +41,7 @@ footerHtml: true
     },{
         title: 'SICP 笔记',
         summary: '读了一部分，也算小有收获。有一些思维方面的捶打，一门语言为什么要这么设计，原因比你想象中的要复杂。加油，未来读完它。',
-        path: '/articles/SICP/SICP.md'
+        path: '/articles/SICP'
     }]
 </script>
 <style scoped>
