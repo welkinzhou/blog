@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.66">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/images/logo.jpg"><title>守拙</title><meta name="description" content="welkin 的互联网小窝">
+    <link rel="preload" href="/blog/assets/style-65ae1279.css" as="style"><link rel="stylesheet" href="/blog/assets/style-65ae1279.css">
+    <link rel="modulepreload" href="/blog/assets/app-fdc7c009.js"><link rel="modulepreload" href="/blog/assets/404.html-fdaa90d3.js"><link rel="modulepreload" href="/blog/assets/404.html-f9875e7b.js"><link rel="prefetch" href="/blog/assets/index.html-c65d6296.js" as="script"><link rel="prefetch" href="/blog/assets/css.html-0ce2c90b.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-f13a5230.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-6c9ebd72.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-c8f4ef9a.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-253e4e3b.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-aeead59c.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-5ca8d4ca.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-0e9a6e06.js" as="script"><link rel="prefetch" href="/blog/assets/css.html-73f9814d.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-afa1da40.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-a624acd0.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-bf27224c.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-968f6d6d.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-9d88ff26.js" as="script"><link rel="prefetch" href="/blog/assets/index.html-e08312ff.js" as="script"><link rel="prefetch" href="/blog/assets/giscus-765fdce2.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here.</blockquote><a href="/blog/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/blog/assets/app-fdc7c009.js" defer></script>
+  </body>
+</html>
